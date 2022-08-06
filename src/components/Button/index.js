@@ -1,22 +1,23 @@
 import classNames from 'classnames/bind';
-import styles from './Button.module.scss';
 import { Link } from 'react-router-dom';
+import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
 
 function Button({
     to,
     href,
-    children = false,
+    primary = false,
     outline = false,
     basicoutline = false,
+    rounded = false,
     disabled = false,
     small = false,
     large = false,
-    rounded = false,
+    children,
+    className, // dùng để css riêng ví dụ button đó đậm, nhạt hơn
     leftIcon,
     rightIcon,
-    primary,
     onClick,
     ...passProps
 }) {
@@ -44,13 +45,14 @@ function Button({
     }
 
     const classes = cx('wrapper', {
+        [className]: className, // Khi có className thì nó sẽ lấy giá trị của nó và truyền vào ví dụ {cx('custom')} => classname: custom
         primary,
         outline,
         basicoutline,
         disabled,
+        rounded,
         small,
         large,
-        rounded,
     });
 
     return (
