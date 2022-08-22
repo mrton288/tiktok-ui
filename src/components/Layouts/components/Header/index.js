@@ -27,6 +27,9 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
+
 
 const cx = classNames.bind(styles);
 
@@ -148,7 +151,7 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -162,7 +165,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/05008cc81971b1cb30226f1c750d70da~c5_100x100.jpeg?x-expires=1660719600&x-signature=pL2E6O44aRs20mqrRpZoKXbEFFI%3D"
                                 className={cx('user-avatar')}
                                 alt="NguyenVanA"

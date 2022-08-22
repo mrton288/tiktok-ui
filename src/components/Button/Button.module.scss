@@ -5,9 +5,10 @@
     min-width: 100px;
     padding: 9px 16px;
     border-radius: 4px;
-    font-size: 1.4rem;
-    font-weight: 700;
-    // font-family: var(--font-family);
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: 'ProximaNova', sans-serif;
+
     cursor: pointer;
     background-color: var(--white);
     border: 1px solid transparent;
@@ -33,7 +34,6 @@
     width: 24px;
     text-align: center;
 }
-
 
 // Button types
 .rounded {
@@ -85,6 +85,6 @@
 }
 
 .large {
-    min-width: 140px;
     padding: 14px 16px;
+    min-width: 140px;
 }
