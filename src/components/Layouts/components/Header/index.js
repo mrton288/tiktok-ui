@@ -13,13 +13,15 @@ import {
     faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
 
+import routesConfig from '~/config/routes';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 
 import Menu from '~/components/Popper/Menu';
-import { MessageIcon, UploadIcon, InboxIcon} from '~/components/Icons';
+import { MessageIcon, UploadIcon, InboxIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
 
@@ -48,7 +50,7 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
         title: 'Feedback and help',
-        to: '/',
+        to: routesConfig.home,
     },
     {
         icon: <FontAwesomeIcon icon={faKeyboard} />,
@@ -57,10 +59,7 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-
     const currentUser = true;
-
-    
 
     //Handle Logic
     const handleMenuChange = (menuItem) => {
@@ -76,7 +75,7 @@ function Header() {
         {
             icon: <FontAwesomeIcon icon={faUser} />,
             title: 'View Profile',
-            to: '/',
+            to: routesConfig.home,
         },
         {
             icon: <FontAwesomeIcon icon={faCoins} />,
@@ -92,7 +91,7 @@ function Header() {
         {
             icon: <FontAwesomeIcon icon={faSignOut} />,
             title: 'Log out',
-            to: '/',
+            to: routesConfig.home,
             separate: true,
         },
     ];
@@ -100,7 +99,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('ineer')}>
-                <img src={images.logo} alt="Tiktok" />
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Tiktok" />{' '}
+                </Link>
 
                 <Search />
 
