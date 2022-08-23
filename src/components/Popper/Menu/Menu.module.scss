@@ -11,6 +11,10 @@
     padding-bottom: 8px;
 }
 
+.menu-body {
+    overflow-y: auto;
+}
+
 // Menu items
 .menu-item {
     width: 100%;
@@ -26,8 +30,6 @@
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }
-
-    
 }
 
 //Header
@@ -35,7 +37,7 @@
     position: relative;
     height: 50px;
     margin-top: -8px;
-
+    flex-shrink: 0;
 }
 
 .back-btn {
@@ -51,4 +53,3 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
