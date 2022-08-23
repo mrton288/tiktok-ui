@@ -15,7 +15,7 @@ import {
 import 'tippy.js/dist/tippy.css';
 import { Link } from 'react-router-dom';
 
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -50,7 +50,7 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
         title: 'Feedback and help',
-        to: routesConfig.home,
+        to: '/feedback',
     },
     {
         icon: <FontAwesomeIcon icon={faKeyboard} />,
@@ -75,7 +75,7 @@ function Header() {
         {
             icon: <FontAwesomeIcon icon={faUser} />,
             title: 'View Profile',
-            to: routesConfig.home,
+            to: config.routes.home,
         },
         {
             icon: <FontAwesomeIcon icon={faCoins} />,
@@ -91,7 +91,7 @@ function Header() {
         {
             icon: <FontAwesomeIcon icon={faSignOut} />,
             title: 'Log out',
-            to: routesConfig.home,
+            to: '/logout',
             separate: true,
         },
     ];
@@ -99,7 +99,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('ineer')}>
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Tiktok" />{' '}
                 </Link>
 
@@ -121,7 +121,7 @@ function Header() {
                             <Tippy delay={[0, 50]} content="Inbox" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <InboxIcon />
-                                    <span className={cx('badge')}>30</span>
+                                    <span className={cx('badge')}>10</span>
                                 </button>
                             </Tippy>
                         </>
@@ -137,7 +137,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 src="https://scontent.fhph1-3.fna.fbcdn.net/v/t1.6435-9/198668076_1485976088406580_2977384901239349296_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TiT9rsoIVOYAX_J3saJ&tn=AXBaNqlYoZqmXKwz&_nc_ht=scontent.fhph1-3.fna&oh=00_AT9pJNIhEjjQYfxq5RIH0Z-sqLnFRVY2kJKs_kEtAIaUEA&oe=6329544B"
-                                className={cx('user-avatar')}
+                                className={cx('user-avatar')}   
                                 alt="NguyenVanA"
                             />
                         ) : (
