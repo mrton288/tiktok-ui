@@ -102,7 +102,6 @@ function Header() {
                 <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Tiktok" />{' '}
                 </Link>
-
                 <Search />
 
                 <div className={cx('actions')}>
@@ -137,7 +136,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 src="https://scontent.fhph1-3.fna.fbcdn.net/v/t1.6435-9/198668076_1485976088406580_2977384901239349296_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TiT9rsoIVOYAX_J3saJ&tn=AXBaNqlYoZqmXKwz&_nc_ht=scontent.fhph1-3.fna&oh=00_AT9pJNIhEjjQYfxq5RIH0Z-sqLnFRVY2kJKs_kEtAIaUEA&oe=6329544B"
-                                className={cx('user-avatar')}   
+                                className={cx('user-avatar')}
                                 alt="NguyenVanA"
                             />
                         ) : (
