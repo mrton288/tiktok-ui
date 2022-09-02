@@ -18,7 +18,7 @@ function MenuItem({ data, onClick }) {
 
 MenuItem.propTypes = {
     data: PropTypes.object.isRequired,
-    onClick: PropTypes.func, 
-}
+    onClick: PropTypes.func,
+};
 
 export default MenuItem;
